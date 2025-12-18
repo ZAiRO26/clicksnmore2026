@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
+/* Clicksnmore - Brutalist/Neo-Retro Palette */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Your specified colors */
+  --neon-pink: #FF00FF;
+  --acid-green: #CCFF00;
+  --deep-blue: #0000FF;
+  --off-white: #F0F0F0;
+  --pure-black: #000000;
+
+  /* Legacy colors (for existing components) */
+  --hot-pink: #FF00FF;
+  --electric-blue: #0000FF;
+
+  /* Semantic */
+  --background: var(--pure-black);
+  --foreground: var(--off-white);
+
+  /* Typography - Premium Google Fonts */
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-mono: var(--font-jetbrains), 'JetBrains Mono', 'Courier New', monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-neon-pink: var(--neon-pink);
+  --color-acid-green: var(--acid-green);
+  --color-deep-blue: var(--deep-blue);
+  --color-off-white: var(--off-white);
+  --color-hot-pink: var(--hot-pink);
+  --color-electric-blue: var(--electric-blue);
+  --color-pure-black: var(--pure-black);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Hide default cursor globally */
+* {
+  cursor: none !important;
+}
+
+html {
+  scroll-behavior: auto;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+}
+
+/* Typography Classes */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--neon-pink);
+  color: var(--pure-black);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pure-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-pink);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--acid-green);
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.glitch:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Link underline effect */
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--neon-pink);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
 }
