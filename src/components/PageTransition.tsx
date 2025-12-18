@@ -1,15 +1,15 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 interface PageTransitionProps {
     children: ReactNode;
 }
 
-// Curtain wipe variants
-const curtainVariants = {
+// Curtain wipe variants with proper typing
+const curtainVariants: Variants = {
     initial: {
         scaleY: 1,
     },
@@ -17,19 +17,19 @@ const curtainVariants = {
         scaleY: 0,
         transition: {
             duration: 0.8,
-            ease: [0.76, 0, 0.24, 1],
+            ease: [0.76, 0, 0.24, 1] as const,
         },
     },
     exit: {
         scaleY: 1,
         transition: {
             duration: 0.8,
-            ease: [0.76, 0, 0.24, 1],
+            ease: [0.76, 0, 0.24, 1] as const,
         },
     },
 };
 
-const pageVariants = {
+const pageVariants: Variants = {
     initial: {
         opacity: 0,
         y: 20,
@@ -42,7 +42,7 @@ const pageVariants = {
         transition: {
             duration: 0.6,
             delay: 0.4,
-            ease: [0.16, 1, 0.3, 1],
+            ease: [0.16, 1, 0.3, 1] as const,
         },
     },
     exit: {
@@ -51,7 +51,7 @@ const pageVariants = {
         filter: 'blur(10px)',
         transition: {
             duration: 0.4,
-            ease: [0.76, 0, 0.24, 1],
+            ease: [0.76, 0, 0.24, 1] as const,
         },
     },
 };
@@ -64,19 +64,18 @@ export default function PageTransition({ children }: PageTransitionProps) {
             <motion.div key={pathname}>
                 {/* Curtain Overlay */}
                 <motion.div
-                    className="fixed inset-0 z-[9998] origin-top bg-hot-pink"
+                    className="fixed inset-0 z-[9998] origin-top bg-neon-pink"
                     variants={curtainVariants}
                     initial="initial"
                     animate="animate"
                     exit="exit"
                 />
                 <motion.div
-                    className="fixed inset-0 z-[9997] origin-bottom bg-electric-blue"
+                    className="fixed inset-0 z-[9997] origin-bottom bg-deep-blue"
                     variants={curtainVariants}
                     initial="initial"
                     animate="animate"
                     exit="exit"
-                    style={{ transitionDelay: '0.1s' }}
                 />
 
                 {/* Page Content */}
