@@ -9,78 +9,66 @@ const services = [
     {
         id: 'editorial',
         title: 'Editorial',
-        emoji: '📰',
         description: 'Magazine covers, fashion spreads, and visual storytelling for print and digital publications.',
         image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800',
     },
     {
         id: 'commercial',
         title: 'Commercial',
-        emoji: '💼',
         description: 'Brand campaigns, product photography, and advertising that captures attention.',
         image: 'https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=800',
     },
     {
         id: 'events',
         title: 'Events',
-        emoji: '🎉',
         description: 'Concerts, parties, and live moments frozen in time with raw energy.',
         image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800',
     },
     {
         id: 'portraits',
         title: 'Portraits',
-        emoji: '📸',
         description: 'Personal and professional portraits that reveal character and authenticity.',
         image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800',
     },
     {
         id: 'documentary',
         title: 'Documentary',
-        emoji: '🎬',
         description: 'Real stories, real people. Long-form visual journalism and storytelling.',
         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
     },
     {
         id: 'creative',
         title: 'Creative Direction',
-        emoji: '✨',
         description: 'Full creative vision from concept to execution. Art direction for brands.',
         image: 'https://images.unsplash.com/photo-1552083375-1447ce886485?w=800',
     },
-    // NEW SERVICES
     {
         id: 'prewedding',
         title: 'Pre-wedding Sessions',
-        emoji: '💕',
         description: 'Romantic couple photography sessions that celebrate your love story. Perfect for save-the-dates and engagement announcements.',
         image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
     },
     {
         id: 'fashion',
         title: 'Fashion Photography',
-        emoji: '👗',
         description: 'High-end fashion shoots for models, designers, and brands. Creative direction and professional styling included.',
         image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800',
     },
     {
         id: 'portrait-sessions',
         title: 'Portrait Sessions',
-        emoji: '📸',
         description: 'Professional headshots and personal branding photography. Perfect for professionals, artists, and entrepreneurs.',
         image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
     },
     {
         id: 'event-photography',
         title: 'Event Photography',
-        emoji: '🎉',
         description: 'Corporate events, parties, and special occasions captured with professional expertise and creative flair.',
         image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800',
     },
     {
         id: 'fineart',
         title: 'Fine Art Sessions',
-        emoji: '🎨',
         description: 'Artistic and conceptual photography for personal expression and creative projects. Fully customized experiences.',
         image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800',
     },
@@ -200,7 +188,6 @@ export default function ServicesPage() {
                                             whileHover={{ x: 20 }}
                                             transition={{ duration: 0.3 }}
                                         >
-                                            <span className="mr-4 text-2xl md:text-3xl">{service.emoji}</span>
                                             {service.title}
                                         </motion.h2>
 
