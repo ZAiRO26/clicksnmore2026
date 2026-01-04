@@ -22,10 +22,28 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Clicksnmore | Photography Portfolio",
   description: "Bold. Raw. Unapologetic. Photography that captures moments with attitude.",
+  icons: {
+    icon: [
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/favicon/apple-touch-icon.png',
+      },
+    ],
+  },
+  manifest: '/favicon/site.webmanifest',
   themeColor: '#000000',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
+    title: 'Clicksnmore',
   },
 };
 
