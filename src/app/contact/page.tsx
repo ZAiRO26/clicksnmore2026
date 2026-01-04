@@ -89,10 +89,10 @@ export default function ContactPage() {
                                 INQUIRIES
                             </span>
                             <a
-                                href="mailto:hello@clicksnmore.com"
+                                href="mailto:hello@clicksnmore.in"
                                 className="group inline-block font-serif text-4xl md:text-6xl lg:text-8xl font-bold text-off-white hover:text-neon-pink transition-colors duration-300 leading-tight"
                             >
-                                hello@clicksnmore.com
+                                hello@clicksnmore.in
                                 <motion.span
                                     className="block h-1 bg-neon-pink mt-2 origin-left"
                                     initial={{ scaleX: 0 }}
@@ -112,10 +112,10 @@ export default function ContactPage() {
                                 COMMERCIAL
                             </span>
                             <a
-                                href="tel:+1234567890"
+                                href="tel:+919354785960"
                                 className="group inline-block font-serif text-4xl md:text-6xl lg:text-8xl font-bold text-off-white hover:text-neon-pink transition-colors duration-300 leading-tight"
                             >
-                                +1 (234) 567-890
+                                +91-9354785960
                                 <motion.span
                                     className="block h-1 bg-neon-pink mt-2 origin-left"
                                     initial={{ scaleX: 0 }}
